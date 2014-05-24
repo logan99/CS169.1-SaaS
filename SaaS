@@ -1,0 +1,334 @@
+Software As a Service. CS169.1x Engineering Software as a Service.
+
+Teacher : *Armando Foxand and David Patterson*
+
+__Overview!!__
+
+
+-- Learn Software Engieering Principles by understanding new challenges,opportunities, 
+and open problems of SaaS.
+
+-- See how a SaaS project is taken from conception to public deployment.
+
+1. Solve Non-Technical Customer problem.
+2. Server Side: Ruby on Rails
+3. Client Side: HTML,CSS,AJAX,JavaScript
+4. Deploy using cloud computing.
+
+*(GRADING)*
+	-- 70% - 5 assignments(homeworks)
+	-- 30% - 4 quizzes
+
+*A typical week*
+
+
+__*Introduction to Software Engineering*__
+
+If SW Engineering so popular, why so many SWE disasters?
+
+Ex. Software bug killed 3 people due to radiation
+Mars Climate Orbitor 
+
+*Lessons from  60years of SW development.
+
+
+__Software as a Service__
+
+-- Traditional SW : binary code installed and runs wholly on client device,which users must upgrade repeatedly
+	-- Must work with many versions of hardware, many versions of OS
+	-- New versions must go through extensive release cycle to ensure compatibility.
+
+-- An alternative where develop SW that only needs to work on one HW & OS platform?
+	-- Quicker release cycle, no user upgrades?
+
+-- SaaS delivers SW & data as service over Internet via thin program(e.g.,browser) running on client device
+	-- Search, social networking, video
+-- Now also SaaS version of traditional SW E.g.Microsoft office 365, TurboTax Online
+
+-- Instructors think SaaS is revolutionary, the future of virtually all software.
+
+__6 Reasons for SaaS__
+
+1. No install worries about HW capaility, OS
+2. No worreis about data loss(data is remote)
+3. Easy for grousto interact with same data
+4. if data is large or changed frequently, simpler to keep 1 copy at central site
+5. 1 copy of SW, single HW/OS environment 
+   => No compatibility hassles for developers
+   => beta test new features on 1% of users.
+6. 1 copy => simplifies upgrades for developers and no user upgrade requests.
+
+
+
+
+## Thing we learn
+
+__Service Oriented Architecture__
+
+
+SaaS has a related concept known as SOA.
+
+# Software Architecture
+
+1. SOA: SW architecure where all componenets are designed to be services.
+2. Apps composed of interoperable services
+	- Easy to tailor new version for subset of users.
+	- Also easier to recover from mistake in design.
+
+
+We say it as Software Silo. No API's visible.
+3. Contrast to "SW silo" with no internal API's.
+
+
+*Bezos CEO: Amazon shall use SOA!*
+
+1. "All teams will henceforth expose their data and functionality through service interfaces."
+2. "Teams must communicate with each other through those interfaces."
+3. "There will be no other form of interprocess communication allowed: no direct linking, nodirect readsof another team's data store, no shared-memory model, no back-doors whatsoever.
+The only communication allowed is via service interface calls over the network.".
+4. "It doesn't matter what [API protocol] technology you use."
+5. "Service interfaces", without exception, must be designed from the ground up to be externalizable. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions."
+6. "Anyone who doesn't do this willbe fired."
+7. Thank you; have a nice day!"
+
+
+Example:- 
+Non-SOA
+* Internal subsystems can share data directly- Review access user profile.
+* all subsytems inside single API ("Bookstore")
+
+SOA
+
+* Subsystems independent, as if in separate datacenters - Review Service access User Service API
+* Can recombine to make new service("Favourite Books")
+
+
+__Cloud Computing__
+
+
+1. SaaS's 3 demands on infrastructure
+	a. Communication -- Allow customers to interact with service.
+	b. Scalibility -- Fluctuation in demand during + new services to add users rapidly.
+	c. Dependability -- Service & Communication available 24x7
+
+2. Services on Clusters
+	a. Clusters: Commodity computrs connected by commodity Ethernet switches.
+	b. More scalabe than conventional servers
+	c. Much cheaerthan conentional server - 20x for equivalent vs.larges servers
+	d. Dependability via extensive redundancy.
+	e. Few oerators for 1000s servers -- Careful selection of identical HW/SW
+					  -- virtual Machine Monitors simlify operation.
+
+3. Warehouse Scale Computers
+	a. clusters grew from 1000 servers to 100.000 based on customers demand for SaaS apps.
+	b. Economics of scale pushed down cost of largest datacenter by factors 3X to 8X
+		-- Purchase, house, operate 100K v. 1k computers
+	c. Traditional datacenters utilized 10%-20%
+	d. Earn $ offering pay-as-you go use at less than customer's costs for as many computers as customer needs
+
+4. Utility Computing/Public Cloud Computing
+	a. Offers computing,storage, communication at pennies per hour.
+	b. No premium to scale
+		1000 computers @ 1 hours
+		= 1 computers @ 1000 hours
+	c. Illusion of infinite scalability to cloud user - As many computers as you can afford.
+	d. Leading examples: Amazon Web Services, Google App Engine, Microsoft Azure.
+
+5. SuperComputer for hire
+	a. Top 500 supercomputer competion in 2012
+	b. 532 Eight Extra Large(@ $2.40/hour), 17000 cores = 240 TeraFLOPS
+	c. 72nd /500 supercomputer @ ~$1300 per hour
+	d. Credit Card => can use 1000s computers
+	e. FarmVille on AWS
+		- Prior biggest online game 5M users
+		- What if startup had to build datacenter?
+		- 4 days= 1M, 2 months = 10M; 9 months = 75M
+
+
+__Beautiful Code Vs. Legacy Code__
+
+1. Programming Athetics
+	a. 
+
+
+__Software Quality Assurance__
+
+Said about product quality, software quality, validation and verification and different Testing techniques like white,black, unit etc..
+
+
+__Productivity: Conciseness, Synthesis,Reuse,and Tools__
+
+* 50 years of Moore's Law => 2X/1.5 years
+	=> HW designer get bigger.
+	=> Faster processors and bigger memories
+	=> SW desigs get bigger
+	=> Had to imporve SW productivity.
+
+* 4 Techniques
+	1. Clarity via Conciseness
+	2. Synthesis
+	3. Reuse
+
+* Syntax: shorter and easier toread
+	assert_greater_than_or_equal_to(a,7) s a.should be a>=7
+* Raise the level of abstraction:
+	- HLL programming languages vs. assemblylang
+	- Automatic memory management(Java vs. C)
+	- Scripting languages: reflection, metaprogramming
+
+* Software synthesis
+	-- BitBit 
+
+
+=-=======================WEEK1 Half done=========================================
+
+__SW Development Processes: Plan & Documentation__ 
+
+Waterfall model, Spiral Model, Rational Unified Model(RUP) and Risk Management.
+
+__Development Processes: Agile__
+
+Agile Development is booming lately, giving rise to more working software then a non-working software. In 2001, the idea got immeense attention with people thrasing agile development and even seeing agile as a non software engineering tool. Some labelled it as Hackers apporach which was highly discouraged. 
+
+In 2013, half of the projects are done in agile with distributed systems.
+
+Which statement is TRUE?
+
+THe big different between Agile and P&D is measuring progress against a plan.
+
+
+
+__Pitfalls and Summary__
+
+
+Fallacy : The agile lifecycle is best for software development
+	- Good Match for some SW, especially SaaS
+	- But not for NASA, code subject and specifications.
+
+Pitfall: Ignoring the cost of software design
+	- Since 
+
+
+Syngery effect.
+
+__Size and Scrum__
+
+Team management is an imporant part of software development. As there is no super programmer era anymore, programmers have to work together.
+
+This was resolved by the idea of scrum organisation. Everyday, everyone of the team members meet at any pre-defined time and answer three questions:
+
+1. What have you done since yesterday?
+2. What are you planning to do today?
+3. Are there any impediments or stumbling blocks?
+
+* Help individuals by identify what they need.
+
+* Scrum Roles
+	-- Team : 2-pizza size team that delivers SW
+	-- ScrumMaster: team member who
+		- Acts as buffer between the Team and external distractions.
+		- Keeps team focused on task at hand.
+		- Enforces team rules(coding standard)
+		- Removes impediments that prevent team from making progress.
+
+	-- Product Owner : A team member(not the Scrum Master) who represents the voice of the customer and prioritizes user stories.
+
+* Resolving Conflicts.
+- Eg. Different view on right technical direction.
+1. 1st list all items on which the sides agree
+	- vs. starting with list of disagreements.
+	- Discover closer together than they realize?
+2. Each side articulates the other's arguments, even if don't agree with some
+	- Avoids confusion about terms or assumptions, which may be real cause of conflict.
+
+3. Constructive Confrontation(Intel)
+	- if you have a strong opinion that a person is proposing the wrong thing technically, you are obligated to bring it up, even to your bosses
+
+4. Disagree and commit(Intel)
+	- Once decision made, need to embrace it and move ahead
+	- "I disagree, but I am going to helop even if I don't agree."
+* Conflict resolutin in personal life.
+
+* Scrum Summary
+
+1. Basically, self-organizing small team with daily standup meetings.
+2. Work in "sprints" of 2-4 weeks.
+3. Suggest members rotate through roles (especially Product Owner) each iteration.
+
+__Pair Programming__
+
+In Pair Programming, there are two roles: 1. Driver -- who thinks tactically and write the code other is Obeserver who acts as a buffer and thinks strategically. 
+
+--Swap Frequently between driver and observer.
+
+Some features of Pair Programming are:
+
+1. PP quicker when task complexity is low.
+2. PP yields higher quality when high
+	-- Anecdotally, sometimes more readable code too
+3. But more effor than solo programmers? 
+4. Also transfers knowledge between pair
+	- programming idioms, tool tricks, company processes, latest technologies,...
+	- Some teams purposely swap partners per taks
+	=> eventually everyone is paired ("promiscuous paring")
+
+The Driver works on tasks at hand, the Observer thinks strategicaly on future tasks.
+
+Everything is an object.
+
+__Ruby Introduction__
+
+Already familiar..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
