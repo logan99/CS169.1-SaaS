@@ -51,6 +51,7 @@ def sum_to_n?(array,n)
   if array.empty? then return false end
   newarray = array.permutation(2).to_a
   newarray.each do |arr|
+    sum = 0
     arr.each do |arr1|
       sum += arr1
       if sum == n then return true
@@ -64,5 +65,6 @@ end
 raise "sum_to_n?([],5)!= false" unless sum_to_n?([],5) == false
 raise "sum_to_n?([1,2],3)!= true" unless sum_to_n?([1,2],3) == true
 raise "sum_to_n?([1,2,3,4,5,6],4)!= true" unless sum_to_n?([1,2,3,4,5,6],4) == true
+raise "sum_to_n?([1,2,3,4,5], 5)! = true" unless sum_to_n?([1,2,3,4,5], 5) == true
 
 
